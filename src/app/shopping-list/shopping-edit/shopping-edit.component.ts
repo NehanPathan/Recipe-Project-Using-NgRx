@@ -22,7 +22,7 @@ export class ShoppingEditComponent implements OnInit, OnDestroy {
 
   constructor(
     private slService: ShoppingListService,
-    private store: Store<{ shoppingList: { ingredients: Ingredient[] } }>
+    private store: Store
   ) {}
 
   ngOnInit() {

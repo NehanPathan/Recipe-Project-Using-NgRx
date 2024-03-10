@@ -5,3 +5,7 @@ export const add_ingredient = createAction(
     '[Shopping-list] Add_Ingredeint',
     props<Ingredient>()
 )
+export const add_ingredients = createAction(
+    '[Shopping-list] Add_Ingredeints',
+    props<{ ingredients: Ingredient[] }>()
+)
