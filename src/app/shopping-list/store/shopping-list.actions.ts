@@ -12,10 +12,15 @@ export const add_ingredients = createAction(
 
 export const update_ingredient = createAction(
   '[Shopping-list] Update_Ingredient',
-  props<{ index: number; ingredient: Ingredient }>()
+  props<{ ingredient: Ingredient }>()
 );
 
 export const delete_ingredient = createAction(
-  '[Shopping-list] Delete_Ingredient',
-  props<{index: number}>()
+  '[Shopping-list] Delete_Ingredient'
 );
+
+export const start_edit = createAction(
+  '[Shopping-list] Start_Edit',
+  props<{ index: number }>()
+);
+export const stop_edit = createAction('[Shopping-list] Stop_Edit');
