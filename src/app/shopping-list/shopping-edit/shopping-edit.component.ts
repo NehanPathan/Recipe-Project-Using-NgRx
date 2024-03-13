@@ -4,7 +4,7 @@ import { Subscription } from 'rxjs';
 
 import { Ingredient } from '../../shared/ingredient.model';
 import { Store } from '@ngrx/store';
-import { AppState } from '../store/shopping-list.reducer';
+import * as fromApp from '../../store/app.reducer';
 
 import {
   add_ingredient,
@@ -12,6 +12,7 @@ import {
   stop_edit,
   update_ingredient,
 } from '../store/shopping-list.actions';
+import { AppState } from 'src/app/store/app.reducer';
 
 @Component({
   selector: 'app-shopping-edit',
@@ -28,7 +29,7 @@ export class ShoppingEditComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.subscription = this.store
-      .select((state: AppState) => state.shoppingList)
+      .select((state: fromApp.AppState) => state.shoppingList)
       .subscribe((storeData) => {
         if (storeData.editedIngredientIndex > -1) {
           this.editMode = true;
