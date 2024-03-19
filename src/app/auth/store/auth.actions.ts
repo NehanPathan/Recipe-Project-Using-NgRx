@@ -1,5 +1,7 @@
 import { createAction, props } from '@ngrx/store';
 
+export const login_Start = createAction('[Auth] Login_Start');
+
 export const login = createAction(
   '[Auth] Login',
   props<{
@@ -10,4 +12,3 @@ export const login = createAction(
   }>()
 );
 export const logout = createAction('[Auth] Logout');
-
