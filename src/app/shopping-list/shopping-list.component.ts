@@ -4,8 +4,8 @@ import { Observable, Subscription } from 'rxjs';
 import { Ingredient } from '../shared/ingredient.model';
 import { LoggingService } from '../logging.service';
 import { Store } from '@ngrx/store';
-import * as fromApp from '../store/app.reducer';
 import { start_edit } from './store/shopping-list.actions';
+import * as fromApp from '../store/app.reducer';
 
 @Component({
   selector: 'app-shopping-list',
